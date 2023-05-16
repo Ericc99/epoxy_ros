@@ -1,0 +1,36 @@
+<robot name="mbot">
+
+    <material name="Blue">
+        <color rgba="0 0 1 1"/>
+    </material>
+    <material name="White">
+        <color rgba="1 1 1 0.95"/>
+    </material>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.16" radius="0.20" />
+            </geometry>
+            <material name="Blue"/>
+        </visual>
+    </link>
+
+    <link name="odom">
+        <visual>
+            <geometry>
+                <box size="0.2 0.2 0.06"/>
+            </geometry>
+            <material name="White"/>
+        </visual>
+
+    </link>
+
+    <joint name="odom2baselink" type="continuous">
+        <parent link="base_link"/>
+        <child link="odom"/>
+        <origin xyz="0.0 0.0 0.11" rpy="0.0 0.0 0.0"/>
+        <axis xyz="0.0 0.0 1"/>
+    </joint>
+
+</robot>

@@ -1,0 +1,8 @@
+<launch>
+
+  <arg name="map_file" default="$(find nav_stack)/maps/20230511good.yaml"/>
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+</launch>
