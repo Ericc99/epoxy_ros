@@ -69,3 +69,13 @@ cd ~/Documents/ros_code
 source devel/setup.bash
 roslaunch nav_stack navigation_main.launch
 ```
+
+
+## ESP-IDF Commands
+
+```
+idf.py set-target esp32s3
+idf.py build
+ls -l /dev/ttyUSB*
+idf.py -p /dev/ttyUSB0 flash
+```

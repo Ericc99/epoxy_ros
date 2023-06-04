@@ -10,8 +10,8 @@
         <param name="map_update_interval" value="0.01"/> // 地图更新的间隔
         <param name="minimumScore" value="300"/> //scanmatch的评分阈值，如果过高则很难通过，会导致地图更新速度非常缓慢
         <param name="occ_thresh" value="0.3"/>
-        <param name="maxRange" value="5.0"/>
-        <param name="maxUrange" value="4.5"/>
+        <param name="maxRange" value="5.0"/> //最大激光雷达范围。范围内的无障碍区域在地图上显示为空闲区域。按maxUrange 小于 实际激光雷达范围 小于等于 maxRange设置。
+        <param name="maxUrange" value="4.5"/> // 最大激光雷达扫描距离（并非激光雷达本身的扫描距离）。只有这个距离内的扫描数据会被使用，超过的会被丢弃。
         <param name="sigma" value="0.05"/>
         <param name="kernelSize" value="1"/>
         <param name="lstep" value="0.05"/>
