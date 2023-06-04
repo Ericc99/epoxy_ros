@@ -79,3 +79,13 @@ idf.py build
 ls -l /dev/ttyUSB*
 idf.py -p /dev/ttyUSB0 flash
 ```
+
+## IPA Coverage Planning
+
+```
+source ./devel/setup.bash
+rosrun ipa_room_exploration room_exploration_server
+
+source ./devel/setup.bash
+rosrun ipa_room_exploration room_exploration_client
+```
