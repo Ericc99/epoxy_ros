@@ -1,0 +1,47 @@
+menu "Application Configuration"
+
+	choice DIRECTION
+		prompt "Communication direction"
+		default RECEIVER
+		help
+			Select Communication direction.
+		config RECEIVER
+			bool "Receiver"
+			help
+				Execute Receiver.
+		config TRANSMITTER
+			bool "Transmitter"
+			help
+				Execute Transmitter.
+	endchoice
+
+	choice TADDR
+		prompt "Sender's address"
+		depends on TRANSMITTER
+		default TADDR1
+		help
+			Select sender's address.
+		config TADDR1
+			bool "Use 1 as sender's address"
+			help
+				Use 1 as sender's address
+		config TADDR2
+			bool "Use 2 as sender's address"
+			help
+				Use 2 as sender's address
+		config TADDR3
+			bool "Use 3 as sender's address"
+			help
+				Use 3 as sender's address
+		config TADDR4
+			bool "Use 4 as sender's address"
+			help
+				Use 4 as sender's address
+		config TADDR5
+			bool "Use 5 as sender's address"
+			help
+				Use 5 as sender's address
+
+	endchoice
+
+endmenu 

@@ -74,6 +74,8 @@ roslaunch nav_stack navigation_main.launch
 ## ESP-IDF Commands
 
 ```
+. $HOME/esp/esp-idf/export.sh
+
 idf.py set-target esp32s3
 idf.py build
 ls -l /dev/ttyUSB*
